@@ -1,0 +1,22 @@
+{
+  "siteName": "vue-ske",
+  "slogan": "Skeleton to webapp with vue.js",
+  "links": {
+    "home": "Home",
+    "about": "About"
+  },
+  "actions": {
+    "enter": "Enter"
+  },
+  "modules": {
+    "users": {
+      "fields": {
+        "email": "Email",
+        "password": "Password"
+      }
+    }
+  },
+  "errors": {
+    "internalServerError": "Internal server error"
+  }
+}

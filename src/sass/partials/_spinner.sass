@@ -1,0 +1,58 @@
+.spinner
+  text-align: center
+  display: none
+  width: 30px
+  height: 30px
+  &.active
+    display: inline-block
+    opacity: 0
+    animation: showSpinner 500ms forwards
+  &.full,
+  &.absolute
+    position: fixed
+    z-index: 10
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: white
+    width: initial
+    height: initial
+    > span
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+  &.absolute
+    background: transparent
+    top: 50%
+    left: 50%
+    right: auto
+    bottom: auto
+    transform: translate(-50%, -50%)
+  &.white
+    > span
+      > span
+        border-color: white
+        border-right-color: transparent
+  > span
+    > span
+      border: 2px solid $brand-primary
+      border-right-color: transparent
+      animation: rotateMe 500ms linear infinite
+      width: 30px
+      height: 30px
+      border-radius: 50%
+      display: inline-block
+
+@keyframes rotateMe
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+@keyframes showSpinner
+  0%
+    opacity: 0
+  100%
+    opacity: 1

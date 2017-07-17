@@ -1,0 +1,36 @@
+.app-splash
+  position: fixed
+  z-index: 10000
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: linear-gradient(45deg, $color-red, darken($color-red, 15%))
+  display: none
+  .centered-box
+    +center-absolute
+    text-align: center
+  &.active
+    display: block
+  &.leave
+    animation: splashHide 1000ms 100ms forwards
+    pointer-events: none
+  .logo-box
+    text-align: center
+    display: block
+    margin: 0 0 40px 0
+    svg
+      width: 96px
+      height: 96px
+      display: inline-block
+      fill: currentColor
+    span
+      display: block
+      margin-top: 10px
+      font-size: 16px
+
+@keyframes splashHide
+  0%
+    opacity: 1
+  100%
+    opacity: 0

@@ -1,0 +1,27 @@
+.layout-base
+  header
+    background: linear-gradient(5deg, darken($color-green, 5%), darken($color-green, 15%))
+    padding: 15px 0
+    position: fixed
+    z-index: $level-header
+    top: 0
+    left: 0
+    right: 0
+    .languages-box
+      position: absolute
+      top: 11px
+      right: 15px
+      text-align: center
+      span
+        font-size: 11px
+        cursor: pointer
+        padding: 5px
+        display: block
+        margin: 0 0 3px 0
+        border: 1px solid $color-green
+        &:last-child
+          margin: 0
+        &.active
+          opacity: .3
+.layout-app
+  header

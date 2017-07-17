@@ -1,0 +1,37 @@
+html
+  height: 100%
+
+body
+  font-family: $base-font
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  background: $color-green
+  position: relative
+  min-height: 100%
+  padding: 90px 0 50px 0
+  color: white
+
+@for $i from 1 through 6
+  h#{$i}
+    font-weight: $weight-200
+    color: inherit
+
+label
+  font-weight: $weight-400
+
+.center
+  text-align: center
+
+.svg-icon
+  +svg-reset
+
+.container-fluid
+  padding-left: 30px
+  padding-right: 30px
+  @media #{$medium-up}
+    margin: 0 auto
+    padding-left: 40px
+    padding-right: 40px
+
+hr
+  border-color: rgba(black, .1)

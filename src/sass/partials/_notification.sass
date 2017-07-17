@@ -1,0 +1,50 @@
+.layout-base,
+.layout-app
+  .alert-fixed
+    border: 0
+    cursor: pointer
+    padding: 20px 50px 20px 30px
+    font-size: 14px
+    font-weight: bold
+    text-transform: uppercase
+    opacity: 1
+    animation: enterAlert 400ms forwards
+    position: fixed
+    z-index: $level-alert
+    top: 100px
+    left: 20px
+    right: 20px
+    @media #{$medium-up}
+      top: 110px
+      left: auto
+      max-width: 500px
+      padding: 30px 70px 30px 40px
+      font-size: 18px
+    &.leave
+      animation: leaveAlert 200ms forwards
+    .svg-icon
+      width: 16px
+      height: 16px
+      position: absolute
+      top: 50%
+      right: 20px
+      fill: currentColor
+      transform: translateY(-50%)
+      @media #{$medium-up}
+        right: 25px
+
+@keyframes enterAlert
+  0%
+    opacity: 0
+    transform: translateX(50px)
+  100%
+    opacity: 1
+    transform: translateX(0px)
+
+@keyframes leaveAlert
+  0%
+    opacity: 1
+    transform: translateX(0px)
+  100%
+    opacity: 0
+    transform: translateX(50px)

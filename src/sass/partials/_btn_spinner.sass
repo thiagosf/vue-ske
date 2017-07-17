@@ -1,0 +1,23 @@
+.btn-spinner
+  position: relative
+  span
+    display: inline-block
+    transition: all 300ms
+    &.spinner-box
+      +center-absolute
+      opacity: 0
+  &[disabled]
+    opacity: 1
+    span
+      &.spinner-box
+        opacity: 1
+        .spinner
+          width: 20px
+          height: 20px
+          > span
+            > span
+              width: 20px
+              height: 20px
+              border-color: white !important
+      &.text
+        opacity: 0
