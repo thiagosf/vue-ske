@@ -1,4 +1,4 @@
-export AppSplash from './AppSplash'
+export Splash from './Splash'
 export Spinner from './Spinner'
 export MainContent from './MainContent'
 export MainHeader from './MainHeader'

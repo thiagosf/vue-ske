@@ -12,3 +12,9 @@ Esqueleto para webapp com vue.js
 - vue-head
 - vue-cookie
 - bootstrap
+
+## Todo
+
+- [ ] Menu mobile de exemplo
+- [ ] Melhorar forma de tradução de erros de campos
+- [ ] Exemplo de dashboard (ao logar)

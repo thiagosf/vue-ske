@@ -14,6 +14,21 @@
         <router-link :to="{ name: 'about' }" class="btn btn-default btn-block">
           {{ $t('links.about') }}
         </router-link>
+        <router-link :to="{ name: 'about' }" class="btn btn-primary btn-block">
+          {{ $t('links.about') }}
+        </router-link>
+        <router-link :to="{ name: 'about' }" class="btn btn-warning btn-block">
+          {{ $t('links.about') }}
+        </router-link>
+        <router-link :to="{ name: 'about' }" class="btn btn-danger btn-block">
+          {{ $t('links.about') }}
+        </router-link>
+        <router-link :to="{ name: 'about' }" class="btn btn-info btn-block">
+          {{ $t('links.about') }}
+        </router-link>
+        <router-link :to="{ name: 'about' }" class="btn btn-success btn-block">
+          {{ $t('links.about') }}
+        </router-link>
         <hr>
         <spinner white active />
       </div>

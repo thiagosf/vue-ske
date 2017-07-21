@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <app-splash v-if="!removedSplash" :active="showSplash"></app-splash>
+    <splash v-if="!removedSplash" :active="showSplash" />
     <transition
       :name="transitionName"
       :mode="transitionMode"
@@ -16,11 +16,11 @@
 import WebFont from 'webfontloader'
 import moment from 'moment'
 import { mapGetters } from 'vuex'
-import { AppSplash } from './components/pieces'
+import { Splash } from './components/pieces'
 import './icons'
 export default {
   name: 'app',
-  components: { AppSplash },
+  components: { Splash },
   head: {
     title () {
       return {
@@ -34,7 +34,8 @@ export default {
     WebFont.load({
       google: {
         families: [
-          'Muli:300,300i,400,400i,600,600i,700'
+          'Hind+Madurai:300,400,500,600,700',
+          'Lobster'
         ]
       }
     })

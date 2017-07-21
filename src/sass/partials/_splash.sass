@@ -1,19 +1,20 @@
-.app-splash
+.splash
   position: fixed
   z-index: 10000
   top: 0
   left: 0
   right: 0
   bottom: 0
-  background: linear-gradient(45deg, $color-red, darken($color-red, 15%))
+  background: $color-red
   display: none
+  color: white
   .centered-box
     +center-absolute
     text-align: center
   &.active
     display: block
   &.leave
-    animation: splashHide 1000ms 100ms forwards
+    animation: splashHide 500ms forwards
     pointer-events: none
   .logo-box
     text-align: center
@@ -34,3 +35,4 @@
     opacity: 1
   100%
     opacity: 0
+    transform: scale(1.3)

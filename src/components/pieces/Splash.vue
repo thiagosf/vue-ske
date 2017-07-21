@@ -17,12 +17,12 @@
 <script>
 import Spinner from './Spinner'
 export default {
-  name: 'app-splash',
+  name: 'splash',
   components: { Spinner },
   computed: {
     cssClasses () {
       return {
-        'app-splash': true,
+        'splash': true,
         active: true,
         leave: !this.active
       }

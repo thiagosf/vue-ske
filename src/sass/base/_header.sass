@@ -1,27 +1,30 @@
 .layout-base
   header
-    background: linear-gradient(5deg, darken($color-green, 5%), darken($color-green, 15%))
+    background: $color-red
     padding: 15px 0
     position: fixed
     z-index: $level-header
     top: 0
     left: 0
     right: 0
+    color: white
     .languages-box
       position: absolute
-      top: 11px
+      top: 13px
       right: 15px
       text-align: center
+      @media #{$medium-up}
+        top: 5px
       span
         font-size: 11px
         cursor: pointer
         padding: 5px
         display: block
         margin: 0 0 3px 0
-        border: 1px solid $color-green
+        border: 1px solid darken($color-red, 10%)
         &:last-child
           margin: 0
         &.active
-          opacity: .3
+          opacity: .4
 .layout-app
   header

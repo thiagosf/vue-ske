@@ -3,14 +3,15 @@
   border-radius: 2px
   line-height: 1
   a
-    display: block
-    font-size: 26px
-    font-weight: $weight-400
+    display: inline-block
+    font-size: 32px
+    font-family: $header-font
     margin-bottom: 5px
     color: white
     .svg-icon
-      width: 30px
-      height: 30px
+      width: 34px
+      height: 34px
+      vertical-align: top
     &:hover,
     &:active,
     &:focus
@@ -18,3 +19,14 @@
   .slogan
     display: block
     font-size: 12px
+    &::before
+      content: "\2022"
+      display: none
+      margin-right: 20px
+      @media #{$medium-up}
+        display: inline-block
+    @media #{$medium-up}
+      display: inline-block
+      font-size: 18px
+      margin-left: 20px
+
