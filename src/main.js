@@ -16,9 +16,7 @@ Vue.use(VueResource)
 Vue.use(VueCookie)
 Vue.use(Bus)
 Vue.use(SimpleUi)
-Vue.use(VeeValidate, {
-  dictionary: i18n.getValidationDictionary()
-})
+Vue.use(VeeValidate)
 Vue.use(VueHead, {
   separator: ` ${String.fromCharCode('8211')} `,
   complement: () => 'aaa'

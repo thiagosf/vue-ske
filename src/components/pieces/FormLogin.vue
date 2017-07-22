@@ -10,7 +10,7 @@
           v-validate="'required|email'"
           :placeholder="$t('modules.users.fields.email')"
           />
-        <field-error :data="errors" field="email" />
+        <field-error :data="errors" model="users" field="email" />
       </div>
       <div :class="formGroupClass('password')">
         <input
@@ -18,10 +18,10 @@
           name="password"
           class="form-control"
           v-model="model.password"
-          v-validate="'required'"
+          v-validate="'required|min:3'"
           :placeholder="$t('modules.users.fields.password')"
           />
-        <field-error :data="errors" field="password" />
+        <field-error :data="errors" model="users" field="password" />
       </div>
       <div class="submit-box">
         <button-spinner primary block :disabled="sending">

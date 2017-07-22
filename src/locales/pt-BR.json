@@ -2,7 +2,7 @@
   "siteName": "vue-ske",
   "slogan": "Esqueleto para webapp com vue.js",
   "links": {
-    "home": "Home",
+    "home": "Início",
     "about": "Sobre"
   },
   "actions": {
@@ -18,5 +18,17 @@
   },
   "errors": {
     "internalServerError": "Erro interno do servidor"
+  },
+  "validations": {
+    "users": {
+      "email": {
+        "required": "E-mail é obrigatório",
+        "email": "E-mail inválido"
+      },
+      "password": {
+        "required": "Digite sua senha",
+        "min": "A senha precisa ter no mínimo 3 caracteres"
+      }
+    }
   }
 }

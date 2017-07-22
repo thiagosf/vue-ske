@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
-import { Validator } from 'vee-validate'
 import * as allLocales from '../locales'
 
 export default {
@@ -27,8 +26,8 @@ export default {
       },
       {
         name: 'English',
-        locale: 'en',
-        file: 'en',
+        locale: 'en-US',
+        file: 'enUS',
         enabled: true
       }
     ]
@@ -41,7 +40,6 @@ export default {
   locale (locale) {
     if (locale) {
       Vue.config.lang = locale
-      Validator.setLocale(locale)
     } else {
       return Vue.config.lang
     }
@@ -52,16 +50,5 @@ export default {
   },
   defaultLocaleItem () {
     return this.localeItem(this.locale())
-  },
-  getValidationDictionary () {
-    let dictionay = {}
-    this.locales().forEach((item) => {
-      try {
-        let validations = require(`../locales/validations.${item.locale}`)
-        dictionay[item.locale] = validations.default
-      } catch (e) {
-      }
-    })
-    return dictionay
   }
 }

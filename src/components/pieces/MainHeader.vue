@@ -19,6 +19,14 @@
           {{ locale.name }}
         </span>
       </div>
+      <span class="open-close-nav" @click.prevent="$emit('toggleNav')">
+        <span class="open-nav">
+          <icon icon="menu" />
+        </span>
+        <span class="close-nav">
+          <icon icon="close" />
+        </span>
+      </span>
     </div>
   </header>
 </template>
@@ -32,16 +40,6 @@ export default {
       locales: 'getLocales',
       currentLocale: 'getCurrentLocale'
     })
-  },
-  methods: {
-    changeLocale (locale) {
-      this.$store.dispatch('setLocale', locale.locale)
-    },
-    localeClass (locale) {
-      return {
-        active: locale.locale === this.currentLocale.locale
-      }
-    }
   }
 }
 </script>

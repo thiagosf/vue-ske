@@ -9,12 +9,14 @@
     right: 0
     color: white
     .languages-box
-      position: absolute
-      top: 13px
-      right: 15px
-      text-align: center
+      display: none
       @media #{$medium-up}
+        display: block
+        position: absolute
         top: 5px
+        right: 15px
+        text-align: center
+        font-weight: $weight-400
       span
         font-size: 11px
         cursor: pointer

@@ -1,2 +1,2 @@
 export ptBR from './pt-BR'
-export en from './en'
+export enUS from './en-US'

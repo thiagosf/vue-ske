@@ -18,5 +18,17 @@
   },
   "errors": {
     "internalServerError": "Internal server error"
+  },
+  "validations": {
+    "users": {
+      "email": {
+        "required": "Email is required",
+        "email": "Invalid email"
+      },
+      "password": {
+        "required": "Type your password",
+        "min": "Minimum 3 characteres"
+      }
+    }
   }
 }
