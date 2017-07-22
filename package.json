@@ -12,7 +12,7 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
-    "svg": "vsvg -s ./static/svg -t ./src/icons"
+    "svg": "vsvg -s ./svg -t ./src/icons"
   },
   "dependencies": {
     "awesome-sass-easing": "^1.1.2",
