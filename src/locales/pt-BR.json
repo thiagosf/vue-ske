@@ -3,7 +3,8 @@
   "slogan": "Esqueleto para webapp com vue.js",
   "links": {
     "home": "Início",
-    "about": "Sobre"
+    "about": "Sobre",
+    "dashboard": "Dashboard"
   },
   "actions": {
     "enter": "Entrar"

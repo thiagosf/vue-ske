@@ -1,6 +1,12 @@
 <template>
   <footer class="app-footer">
-    <div class="container-fluid"></div>
+    <div class="container-fluid">
+      <p>
+        🚀
+        {{ $t('siteName') }}
+        {{ year }}
+      </p>
+    </div>
   </footer>
 </template>
 

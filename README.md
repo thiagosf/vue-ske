@@ -17,4 +17,4 @@ Esqueleto para webapp com vue.js
 
 - [x] Menu mobile de exemplo
 - [x] Melhorar forma de tradução de erros de campos
-- [ ] Exemplo de dashboard (ao logar)
+- [x] Exemplo de dashboard (usando outro layout)

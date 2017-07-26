@@ -11,6 +11,9 @@
           </li>
         </ul>
         <hr>
+        <router-link :to="{ name: 'dashboard' }" class="btn btn-default btn-block">
+          {{ $t('links.dashboard') }}
+        </router-link>
         <router-link :to="{ name: 'about' }" class="btn btn-default btn-block">
           {{ $t('links.about') }}
         </router-link>

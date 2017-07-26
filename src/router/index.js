@@ -31,7 +31,7 @@ const router = new Router({
       path: '/app',
       name: 'app',
       component: LayoutApp,
-      meta: { requiresAuth: true },
+      // meta: { requiresAuth: true },
       redirect: '/app/dashboard',
       children: [
         {

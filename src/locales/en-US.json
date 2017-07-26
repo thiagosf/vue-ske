@@ -3,7 +3,8 @@
   "slogan": "Skeleton to webapp with vue.js",
   "links": {
     "home": "Home",
-    "about": "About"
+    "about": "About",
+    "dashboard": "Dashboard"
   },
   "actions": {
     "enter": "Enter"

@@ -1,14 +1,7 @@
 <template>
   <div id="app">
     <splash v-if="!removedSplash" :active="showSplash" />
-    <transition
-      :name="transitionName"
-      :mode="transitionMode"
-      v-on:enter="$defaultEnterTransition"
-      v-if="!showSplash"
-      >
-      <router-view></router-view>
-    </transition>
+    <router-view v-if="!showSplash" />
   </div>
 </template>
 
@@ -47,8 +40,6 @@ export default {
   },
   computed: {
     ...mapGetters({
-      transitionName: 'getTransitionName',
-      transitionMode: 'getTransitionMode',
       currentLocale: 'getCurrentLocale'
     })
   },
