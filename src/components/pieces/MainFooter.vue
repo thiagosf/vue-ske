@@ -4,20 +4,14 @@
       <p>
         🚀
         {{ $t('siteName') }}
-        {{ year }}
+        2017
       </p>
     </div>
   </footer>
 </template>
 
 <script>
-import moment from 'moment'
 export default {
-  name: 'main-footer',
-  computed: {
-    year () {
-      return moment().year()
-    }
-  }
+  name: 'main-footer'
 }
 </script>

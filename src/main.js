@@ -19,19 +19,28 @@ Vue.use(SimpleUi)
 Vue.use(VeeValidate)
 Vue.use(VueHead, {
   separator: ` ${String.fromCharCode('8211')} `,
-  complement: () => 'aaa'
+  complement: 'vue-ske'
 })
+svgicon.computed.clazz = () => 'icon'
 Vue.use(svgicon, { tagName: 'icon' })
 Vue.config.productionTip = false
 
 i18n.install()
 
 let apiRoot = 'https://api.domain.com'
+let apiKey = '123'
 if (process.env.NODE_ENV === 'development') {
   apiRoot = 'http://api.dev.azk.io'
+  apiKey = '123'
 }
 
-Vue.http.options.root = apiRoot
+Vue.http.options = {
+  root: apiRoot,
+  headers: {
+    'X-API-Key': apiKey
+  }
+}
+
 Vue.router = router
 App.store = store
 App.router = Vue.router

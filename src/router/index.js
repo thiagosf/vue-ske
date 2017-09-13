@@ -55,16 +55,14 @@ const router = new Router({
 
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
-    router.app.$store.dispatch('checkLogin').then(user => {
-      if (!store.getters.loggedIn) {
-        next({
-          name: 'home',
-          query: { redirect: to.name, params: JSON.stringify(to.params) }
-        })
-      } else {
-        next()
-      }
-    })
+    if (!store.getters.loggedIn) {
+      next({
+        name: 'home',
+        query: { redirect: to.name, params: JSON.stringify(to.params) }
+      })
+    } else {
+      next()
+    }
   } else {
     next()
   }

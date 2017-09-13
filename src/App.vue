@@ -7,7 +7,6 @@
 
 <script>
 import WebFont from 'webfontloader'
-import moment from 'moment'
 import { mapGetters } from 'vuex'
 import { Splash } from './components/pieces'
 import './icons'
@@ -23,7 +22,6 @@ export default {
     }
   },
   created () {
-    moment.locale(this.currentLocale.locale)
     WebFont.load({
       google: {
         families: [

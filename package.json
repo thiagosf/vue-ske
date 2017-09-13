@@ -17,7 +17,6 @@
   "dependencies": {
     "awesome-sass-easing": "^1.1.2",
     "bootstrap-sass": "^3.3.7",
-    "moment": "^2.18.1",
     "underscore.string": "^3.3.4",
     "vee-validate": "^2.0.0-rc.7",
     "vue": "^2.3.3",
