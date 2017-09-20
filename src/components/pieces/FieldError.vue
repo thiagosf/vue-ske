@@ -17,15 +17,17 @@ export default {
   methods: {
     getErrors (field) {
       let errors = []
-      this.data.errors.forEach((item) => {
-        if (item.field === field) {
-          let key = `validations.${item.field}.${item.rule}`
-          if (this.model) {
-            key = `validations.users.${item.field}.${item.rule}`
+      if (this.data && this.data.errors) {
+        this.data.errors.forEach((item) => {
+          if (item.field === field) {
+            let key = `validations.${item.field}.${item.rule}`
+            if (this.model) {
+              key = `validations.${this.model}.${item.field}.${item.rule}`
+            }
+            errors.push(this.$t(key))
           }
-          errors.push(this.$t(key))
-        }
-      })
+        })
+      }
       return errors.join('\n')
     }
   }
